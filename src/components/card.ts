@@ -1,10 +1,26 @@
 import { Component } from './component';
-
-import './card.css';
+import {} from 'module';
+interface Dog {
+  id: number;
+  name: string;
+  species: string;
+  race: string;
+}
 
 export class Card extends Component {
-  constructor(selector: string) {
+  dogs: Dog;
+  petName: string;
+  petSpecies: string;
+  petRace: string;
+  petId: number;
+
+  constructor(selector: string, dogs: Dog) {
     super(selector);
+    this.dogs = dogs;
+    this.petId = this.dogs.id;
+    this.petName = this.dogs.name;
+    this.petSpecies = this.dogs.species;
+    this.petRace = this.dogs.race;
     this.template = this.createTemplate();
     this.render();
   }
@@ -13,10 +29,10 @@ export class Card extends Component {
     return `
      <div class="card">
      <ul>
-        <li>Name: ${this.name}</li>
-        <li>Species:${this.species}</li>
-        <li>Race:${this.race}</li>
-        <li>ID:${this.id}</li>
+        <li>Name: ${this.petName}</li>
+        <li>Species:${this.petSpecies}</li>
+        <li>Race:${this.petRace}</li>
+        <li>ID:${this.petId}</li>
      </ul>
      </div>
     `;

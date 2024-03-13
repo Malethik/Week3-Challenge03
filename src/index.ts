@@ -1,3 +1,4 @@
+/* eslint-disable array-callback-return */
 /* eslint-disable no-new */
 import { Header } from './components/header';
 import { Main } from './components/main';
@@ -11,6 +12,7 @@ const adress = 'Daniele Quintiliani';
 
 new Header('.app', title);
 new Main('.app');
-new Card('main');
-pets.map((item) => new Card('main', item));
+pets.map((item) => {
+  new Card('main', item);
+});
 new Footer('.app', adress);

@@ -1,5 +1,5 @@
 /* eslint-disable no-undef */
-import { Dog } from '../data';
+
 export class Component {
   selector: string;
   template: string = '';
@@ -8,12 +8,8 @@ export class Component {
     this.selector = selector;
   }
 
-  unrender() {
+  unRender() {
     this.element.outerHTML = '';
-  }
-
-  mapping() {
-    
   }
 
   render(position: InsertPosition = 'beforeend') {
