@@ -6,6 +6,7 @@ import { Card } from './components/card';
 import { Footer } from './components/footer';
 import { pets } from './data';
 import './style.css';
+import { Form } from './components/form';
 
 const title = `PET LIST`;
 const adress = 'Daniele Quintiliani';
@@ -15,4 +16,5 @@ new Main('.app');
 pets.map((item) => {
   new Card('main', item);
 });
+new Form('main');
 new Footer('.app', adress);
