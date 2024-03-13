@@ -36,3 +36,5 @@ Añade una página Home, junto con la página de Lista y permite navegar entre e
 ## LO MAS IMPORTANTE y CRÍTICO
 
 Testamos todos
+
+`const id = crypto.randomUUID()`
