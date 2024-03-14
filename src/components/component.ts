@@ -8,6 +8,10 @@ export class Component {
     this.selector = selector;
   }
 
+  replace() {
+    this.element.outerHTML = this.template;
+  }
+
   unRender() {
     this.element.outerHTML = '';
   }
