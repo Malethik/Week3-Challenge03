@@ -20,7 +20,7 @@ export class Form extends Component {
 
     const input = this.element.querySelector('button');
     if (input) {
-      input.addEventListener('click', (event: Event) => {
+      input.addEventListener('submit', (event: Event) => {
         const target = event.target as HTMLInputElement;
         this.name = target.value as string;
         this.species = target.value as string;
